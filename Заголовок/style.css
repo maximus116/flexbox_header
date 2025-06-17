@@ -1,0 +1,51 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+ul{
+list-style: none;
+}
+a{
+    color: #424242;
+    size: 20px;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #8F8E8E;
+   } 
+a:hover {
+    color: blue;
+   }
+
+.wrap{
+    max-width: 1140px;
+    max-height: 103px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 60px auto;
+
+}
+.nav_cont{
+    display: flex;
+    align-items: center; 
+}
+.nav ul{
+    display: flex;
+    padding: 0 4px;
+    margin: 20px;
+     }
+   
+.nav li{
+    padding: 8px 16px;
+}
+.logo img{
+    max-width: 140px;
+    max-height: 35px;
+}
+.search_button img{
+max-width: 30px;
+max-height: 20px;
+}
+
