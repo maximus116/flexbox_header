@@ -1,11 +1,13 @@
-body{
+body {
     padding: 0;
     margin: 0;
 }
-ul{
-list-style: none;
+
+ul {
+    list-style: none;
 }
-a{
+
+a {
     color: #424242;
     size: 20px;
     text-decoration: none;
@@ -13,39 +15,131 @@ a{
 
 a:visited {
     color: #8F8E8E;
-   } 
+}
+
 a:hover {
     color: blue;
-   }
+}
 
-.wrap{
-    max-width: 1140px;
-    max-height: 103px;
+.nav_top {
+    background: blue;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin: 60px auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
 
+.nav_top {
+    color: white;
 }
-.nav_cont{
-    display: flex;
-    align-items: center; 
+
+.nav_top img {
+    max-width: 20px;
+    max-height: 20px;
 }
-.nav ul{
-    display: flex;
-    padding: 0 4px;
-    margin: 20px;
-     }
-   
-.nav li{
-    padding: 8px 16px;
+
+.social-icons {
+    text-align: center;
 }
-.logo img{
+
+.social-icons li {
+    display: inline-block;
+    list-style-type: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.social-icons li a {
+    border-bottom: none;
+}
+
+.social-icons li img {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+}
+
+.logo img {
     max-width: 140px;
     max-height: 35px;
 }
-.search_button img{
-max-width: 30px;
-max-height: 20px;
+
+.search_button img {
+    max-width: 30px;
+    max-height: 20px;
 }
 
+.navbar {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li a {
+    color: #424242;
+    text-decoration: none;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    display: block;
+    transition: 0.3s;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 960px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: hsla(14, 89%, 52%, 0.945);
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+    }
+
+    .menu img {
+        display: none;
+    }
+
+    .navbar {
+        background-color: white;
+    }
+
+    .menu-toggle:checked+.hamburger+.menu {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+}
