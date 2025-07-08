@@ -20,17 +20,21 @@ a:visited {
 a:hover {
     color: blue;
 }
-
+.content{
+    width: 100%;
+    max-width: 1139px;
+    margin: 0 auto;
+}
 .wrap_header_top {
     background: #1a73e8;
+    height: 58.78px;  
+    display: flex;
+    align-items: center;
 }
 
 .nav_top {
-    max-width: 1140px;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: space-between;
     color: white;
     margin: 0 auto;
 }
@@ -38,15 +42,31 @@ a:hover {
 .nav_top_img {
     display: flex;
     align-items: center;
+    max-width: 556.77px;
+    width: 100%; 
 }
 
 .nav_top img {
-    max-width: 20px;
-    max-height: 20px;
+    max-width: 18x;
+    max-height: 18px;
+}
+.nav_top_span{
+    font-weight: bold;
+    font-size: 14px;
+    padding: 0 5px 0 3px;
+
+}
+.nav_top_img a{
+    color: #d6d6d6;
 }
 
-.social-icons {
-    text-align: center;
+.social-icons ul{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 183.97px;
+    height: 100%;
+    max-height: 28.8px;
 }
 
 .social-icons li {
@@ -61,9 +81,9 @@ a:hover {
 }
 
 .social-icons li img {
-    width: 20px;
-    height: 20px;
-    margin-right: 20px;
+    width: 14px;
+    height: 14px;
+    padding: 0 1px;
 }
 
 .logo img {
@@ -77,19 +97,34 @@ a:hover {
 }
 
 .wrap_navbar_bottom {
-    background: #eeeeee;
+    background:  white;
+    height: 102.39px;
+    display: flex;
+    align-items: center;
 }
 
-.navbar {
-    max-width: 1140px;
+.navbar_bottom {
     margin: 0 auto;
-    padding: 10px 20px;
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
+.wrap_blog{
+  background: #eeeeee;  
+  height: 76.61px;
+  display: flex;
+  align-items: center;
+}
+.blog{
+    padding: 10px 0;
+}
+.blog span{
+font-weight: 900;
+font-size: 25px;
+
+}
 .menu {
     list-style: none;
     display: flex;
@@ -122,14 +157,43 @@ a:hover {
     display: block;
     transition: 0.3s;
 }
+/* Адаптивность 1024 */
+@media (max-width: 1025px) {
+       .content{
+            width: 100%;
+            max-width: 921.95px;
+            margin: 0 auto;
+        }
+    }
+    /* Адаптивность 768 */
+@media (max-width: 769px) {
+       .content{
+            width: 100%;
+            max-width: 691.35px;
+            margin: 0 auto;
+        }        
+    .wrap_header_top {
+        height: 92.58px;  
+         }
+    .nav_top_img {
+        flex-wrap: wrap;
+    max-width: 519.73px;
+    width: 100%; 
+}
+.social-icons ul{
+    width: 100%;
+    max-width: 171.74px;
+    height: 100%;
+    max-height: 62.59px;
+}
 
+    }
 /* Адаптивность для мобильных */
 @media (max-width: 960px) {
     .menu {
         display: none;
         flex-direction: column;
         background-color: rgb(38, 38, 38);
-        ;
         position: absolute;
         top: 50px;
         right: 0;
