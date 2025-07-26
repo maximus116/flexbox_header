@@ -99,7 +99,6 @@ a {
 
 .navbar_bottom {
     margin: 0 auto;
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -107,6 +106,7 @@ a {
 
 .menu-list {
     display: flex;
+    font-size: 18px;
 }
 
 .menu-list li {
@@ -123,35 +123,41 @@ a {
 }
 
 #burger-checkbox {
-    display: none;
+    opacity: 0;
 }
 
 .burger {
     display: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.burger-line {
     background-color: #424242;
+    display: block;
     height: 2px;
     position: relative;
     width: 24px;
-    cursor: pointer;
 }
 
-.burger::before,
-.burger::after {
-    color: #424242;
-    content: '';
-    display: block;
+.burger-line::before,
+.burger-line::after {
+    background-color: #424242;
     position: absolute;
+    display: block;
     transition: all 0.3s;
     width: 100%;
     height: 100%;
 }
 
-.burger::before {
+.burger>span::before {
     top: 7px;
+    content: '';
 }
 
-.burger::after {
+.burger>span::after {
     top: -7px;
+    content: '';
 }
 
 .wrap_blog {
@@ -181,31 +187,52 @@ a {
 
 /* Адаптивность для мобильных */
 @media (max-width: 960px) {
-    .burger {
-        display: block;
-        padding: 20px 0;
-        position: relative;
+    .content{
+        width: 100%;
+        max-width: 790px;
+        margin: 0 auto; 
     }
 
     .menu-list {
-        display: none;
+        position: absolute;
         overflow: hidden;
-        position: relative;
         background-color: beige;
-        text-align: left;
+
+        right: 0;
         width: 200px;
-        top: 50px;
-        max-height: 100vh;
+        max-height: 0;
+        margin-top: 5px;
+
     }
 
-    .burger-checkbox:checked~.menu-list {
+    .menu-list li a {
         display: block;
+        padding: 10px 0;
+    }
+
+    .burger {
+        display: block;
+        padding: 10px 2px;
+    }
+
+    #burger-checkbox:checked~.menu-list {
+        display: block;
+        max-height: 100%;
         transition: all 0.5s;
     }
 
-    .close_button img {
-        max-width: 14px;
-        max-height: 14px;
+    #burger-checkbox:checked~.burger .burger-line {
+        background-color: transparent;
+    }
+
+    #burger-checkbox:checked~.burger .burger-line::before {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    #burger-checkbox:checked~.burger .burger-line::after {
+        transform: rotate(45deg);
+        top: 0;
     }
 
     .search_button {
