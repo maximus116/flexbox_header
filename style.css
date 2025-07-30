@@ -103,7 +103,9 @@ a {
     align-items: center;
     justify-content: space-between;
 }
-
+.mystyle{
+    display: none;
+}
 .menu-list {
     display: flex;
     font-size: 18px;
@@ -180,7 +182,11 @@ a {
     font-weight: 900;
     font-size: 25px;
 }
-
+@media (min-width:961){
+    .menu-list{
+        display: flex;
+    }
+}
 /* Адаптивность 1024 */
 @media (max-width: 1025px) {
     .content {
