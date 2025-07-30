@@ -104,7 +104,7 @@ a {
     justify-content: space-between;
 }
 .mystyle{
-    display: none;
+    display: none !important;
 }
 .menu-list {
     display: flex;
@@ -182,11 +182,7 @@ a {
     font-weight: 900;
     font-size: 25px;
 }
-@media (min-width:961){
-    .menu-list{
-        display: flex;
-    }
-}
+
 /* Адаптивность 1024 */
 @media (max-width: 1025px) {
     .content {
@@ -195,7 +191,11 @@ a {
         margin: 0 auto;
     }
 }
-
+@media (min-width: 961px) {
+    .menu-list {
+        display: flex !important;
+    }
+    }
 /* Адаптивность для мобильных */
 @media (max-width: 960px) {
     .content {
@@ -203,7 +203,6 @@ a {
         max-width: 790px;
         margin: 0 auto;
     }
-
     .menu-list {
         padding: 0;
         position: absolute;
