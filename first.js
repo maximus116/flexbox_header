@@ -31,3 +31,16 @@ window.addEventListener('scroll', function (event) {
      l.classList.remove("wrap_navbar_bottom_scrol");
   }
 });
+
+ function updateContentWidths() {
+    const wraps = document.getElementsByClassName('content');
+    const windowWidth = window.innerWidth;
+    const newWidth = Math.min(Math.max(windowWidth * 0.8, 320), 1800);
+    for (let i = 0; i < wraps.length; i++) {
+      wraps[i].style.width = `${newWidth}px`;
+    }
+  }
+  window.addEventListener('DOMContentLoaded', () => {
+    updateContentWidths();
+    window.addEventListener('resize', updateContentWidths);
+  });
