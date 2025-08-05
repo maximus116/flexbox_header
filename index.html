@@ -32,15 +32,15 @@
 
   <div class="wrap_navbar_bottom">
     <div class="content">
-      <div class="navbar_bottom">
+      <div class="navbar_bottom" id="navbar_bottom">
         <div class="logo">
           <a href="#" class="logo"><img src="img/logo.png" alt="LOGO" /></a>
         </div>
         <div class="menu">
-          <input type="checkbox" onclick="open_btn(this)" id="burger-checkbox">
-          <label for="burger-checkbox" class="burger"><span class="burger-line"></span></label>
+          <input type="checkbox" id="burger-checkbox">
+          <label for="burger-checkbox" onclick="showMenu()" class="burger"><span class="burger-line"></span></label>
           <ul class="menu-list" id="menu_ul">
-            <li><a onclick="close_btn(this)" id="close_btn" href="#">X Закрыть</a></li>
+            <li><a onclick="CloseMenu()" id="close_btn" href="#">X Закрыть</a></li>
             <li><a href="#">Home</a></li>
             <li><a href="#">Support</a></li>
             <li><a href="#">Free Themes</a></li>
@@ -62,7 +62,48 @@
     <div class="blog content">
       <span>BLOG</span>
     </div>
+
   </div>
+  <div class="any_content content">
+  </div>
+  <footer>
+    <div class="wrap_footer_top">
+      <div class="footer_top content">
+        <h3>We change everything WordPress. One WordPress theme at a time.</h3>
+        <div class="btn_find"><a href="#">Find out more!</a></div>
+      </div>
+    </div>
+    <div class="wrap_footer_bottom">
+      <div class="footer_bottom content">
+        <div class="footer_bottom_menu">
+          <ul>
+            <li><span>Useful</span></li>
+            <li><a href="#">About Colorlib</a></li>
+            <li><a href="#">Advertise</a></li>
+            <li><a href="#">Squarespace Templates</a></li>
+            <li><a href="#">WordPress Themes</a></li>
+            <li><a href="#">Website Templates</a></li>
+            <li><a href="#">Bootstrap Templates</a></li>
+            <li><a href="#">Support Forum</a></li>
+            <li><a href="#">– Support Policy</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">We Are Hiring!</a></li>
+          </ul>
+        </div>
+        <div class="info">
+          <div class="info_logo"><a href="#"><img
+                src="https://colorlib.com/wp/wp-content/uploads/sites/2/colorlib-logo-white.png.webp" alt=""></a></div>
+                <br>
+          <p>We change everything WordPress.</p>
+          <br>
+          <p>One WP theme at a time.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="copyright content">Copyright 2013-2025 colorlib.com | operated by Divilab LLC <a href="#">Privacy Policy</a> | <a href="#">Site Terms</a>
+      & <a href="#">Disclosures.</a>Hosted by <a href="#">Kinsta</a></p>
+  </footer>
 </body>
 
 </html>
